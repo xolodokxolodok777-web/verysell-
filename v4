@@ -1,0 +1,284 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "dns": {
+    "queryStrategy": "UseIPv4",
+    "servers": [
+      "1.1.1.1",
+      "8.8.8.8"
+    ]
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      },
+      "tag": "socks"
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": 10809,
+      "protocol": "http",
+      "settings": {},
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      },
+      "tag": "http"
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "ytn.sbrf-cdn342.ru",
+            "port": 4241,
+            "users": [
+              {
+                "id": "ff6190c0-cdcb-46cf-a081-611e50ab9d4b",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "fingerprint": "chrome",
+          "publicKey": "aCT3PdJs8nghWdaozo1O--_WKfV6K97cjIMlJSnZRQY",
+          "serverName": "sun6-22.userapi.com",
+          "shortId": "111111",
+          "show": false
+        }
+      }
+    },
+    {
+      "tag": "FI-MOST",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "185.234.59.224",
+            "port": 8443,
+            "users": [
+              {
+                "id": "ff6190c0-cdcb-46cf-a081-611e50ab9d4b",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "fingerprint": "chrome",
+          "publicKey": "ATRoFPpyxH23kPCa9dKyLTT_gQ_eAkNtVVRlvPaxBjQ",
+          "serverName": "holodos.vk.com",
+          "shortId": "111111",
+          "show": false
+        }
+      }
+    },
+    {
+      "tag": "SE-MOST",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "185.234.59.224",
+            "port": 7443,
+            "users": [
+              {
+                "id": "ff6190c0-cdcb-46cf-a081-611e50ab9d4b",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "fingerprint": "chrome",
+          "publicKey": "ATRoFPpyxH23kPCa9dKyLTT_gQ_eAkNtVVRlvPaxBjQ",
+          "serverName": "holodos.vk.com",
+          "shortId": "111111",
+          "show": false
+        }
+      }
+    },
+    {
+      "tag": "EE-GAME",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "69.12.83.19",
+            "port": 7443,
+            "users": [
+              {
+                "id": "ff6190c0-cdcb-46cf-a081-611e50ab9d4b",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "fingerprint": "chrome",
+          "publicKey": "XguLRlc-hWqFhf8-KTxtCE434F6e4Hiqoc5cTBpLxnE",
+          "serverName": "tradingview.com",
+          "shortId": "111111",
+          "show": false
+        }
+      }
+    },
+    {
+      "tag": "FR",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "fr.sbrf-cdn342.ru",
+            "port": 4241,
+            "users": [
+              {
+                "id": "ff6190c0-cdcb-46cf-a081-611e50ab9d4b",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "fingerprint": "chrome",
+          "publicKey": "-8Dc8Dm5YzxVvllu8W5Uc7N9rq27_A3McxYXArNyJQs",
+          "serverName": "dropbox.com",
+          "shortId": "0a381e1fa219",
+          "show": false
+        }
+      }
+    },
+    {
+      "tag": "IT",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "italy.sbrf-cdn342.ru",
+            "port": 4241,
+            "users": [
+              {
+                "id": "ff6190c0-cdcb-46cf-a081-611e50ab9d4b",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "fingerprint": "chrome",
+          "publicKey": "-8Dc8Dm5YzxVvllu8W5Uc7N9rq27_A3McxYXArNyJQs",
+          "serverName": "google.com",
+          "shortId": "0a381e1fa219",
+          "show": false
+        }
+      }
+    },
+    {
+      "tag": "HK",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "hong-kong.sbrf-cdn342.ru",
+            "port": 4241,
+            "users": [
+              {
+                "id": "ff6190c0-cdcb-46cf-a081-611e50ab9d4b",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "fingerprint": "chrome",
+          "publicKey": "-8Dc8Dm5YzxVvllu8W5Uc7N9rq27_A3McxYXArNyJQs",
+          "serverName": "google.com",
+          "shortId": "0a381e1fa219",
+          "show": false
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom"
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole"
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "protocol": [
+          "bittorrent"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "network": "tcp,udp",
+        "outboundTag": "proxy"
+      }
+    ]
+  }
+}
